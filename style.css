@@ -52,13 +52,17 @@ body {
   border-color: #000051;
 }
 
-.footer {
-  background-color: #1a237e;
-  color: #ffffff;
-}
+.container-footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
 
 .hero-section {
-    background-image: url('img/hero-background.jpg');
+    background-image: url(img/night-party-4k-concert-night-club-fans.jpg);
     background-size: cover;
     background-position: center;
     color: #ffffff;
@@ -84,32 +88,64 @@ body {
 
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 50px;
 }
 
-.event-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+.container h2{
     text-align: center;
+    padding: 20px;
+}
+
+
+.event-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+
+.event-card:hover {
+    transform: translateY(-5px);
 }
 
 .event-card img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 20px;
+}
+
+.event-card .event-details {
+    padding: 15px;
+    text-align: center;
 }
 
 .event-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .event-card p {
+    margin-top: 0;
+    margin-bottom: 10px;
     font-size: 14px;
-    margin-bottom: 20px;
+    color: #666;
+}
+
+.event-card a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    text-decoration: none;
 }
