@@ -18,3 +18,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
   }
   );
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.querySelector(".contact-form");
+    contactForm.classList.add("animated");
+  });
